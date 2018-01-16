@@ -11,8 +11,18 @@
 
 #sky{
 	width:100%;
-	height:50%;
-	background-color:black;
+	height:50%
+}
+
+#sun{
+	z-index:-1;
+	width:100px;
+	height:100px;
+	background-color:#FFD700;
+	border-radius:100%;
+	position:relative;
+	margin:0px;
+	padding:0px;
 }
 
 #earth{
@@ -24,21 +34,34 @@
 	background-position: 0 0, 50px 50px;
 }
 
-#sun{
-	z-index:-1;
-	width:100px;
-	height:100px;
-	background-color:#FFD700;
-	border-radius:100%;
-	position:relative;
-	top: 474px;
-	left: 0px;
-	margin:0px;
-	padding:0px;
+.day#sky{
+	background-color:rgba(135, 206, 235, 0.2);
+	transition:background-color 2s;
 }
 
-#moon{
+.day#sun{
+	top: 474px;
+	left: 3vw;
+}
+
+.day#moon{
 	display:none;
+}
+
+.halfday#sun{
+	transition:top 8s, left 12s;
+	top:0;
+	left:50vw;
+}
+
+.night#sky{
+	width:100%;
+	height:50%;
+	background-color:black;
+	transition:background-color 2s;
+}
+
+.night#moon{
 	width:100px;
 	height:100px;
 	background-color:white;
@@ -50,3 +73,9 @@
 	padding:0px;
 }
 
+.night#sun{
+	transition:top 18s, left 12s;
+	top:
+	474px;
+	left:92vw;
+}
